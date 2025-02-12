@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jellyfish0128</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="header">jellyfish( ꜆⌯' '⌯)꜆♡</div>
+
+    <div class="container">
+        <button id="enterBtn">Jellyfish</button>
+    </div>
+
+    <div id="mainContent" class="hidden">
+        <div class="emoji">(˶ᐢ. .ᐢ˵)</div>
+        <div id="changingText">初めまして、私は Jellyfish です</div>
+        <div class="separator">♡ ••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•• ♡</div>
+
+        <!-- 📅 日期倒數 -->
+        <div class="box">
+            <h3>📅 重要日子倒數</h3>
+            <p id="countdownText">設定日期倒數...</p>
+            <button class="editBtn" onclick="editCountdown()">修改</button>
+        </div>
+
+        <!-- 📆 月曆 -->
+        <div class="box">
+            <h3>📆 月曆</h3>
+            <iframe src="https://calendar.google.com/calendar/embed?src=your-calendar-id" style="border: 0" width="300" height="250"></iframe>
+        </div>
+
+        <!-- 📝 便利貼（彈窗） -->
+        <button id="openStickyBtn">📌 開啟便利貼</button>
+        <div id="stickyPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closeSticky()">&times;</span>
+                <h3>📝 便利貼</h3>
+                <textarea id="stickyNote"></textarea>
+                <button onclick="saveSticky()">保存</button>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
