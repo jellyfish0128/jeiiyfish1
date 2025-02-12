@@ -9,7 +9,7 @@
 <body>
 
     <div class="header">jellyfish( ꜆⌯' '⌯)꜆♡</div>
-
+    
     <div class="container">
         <button id="enterBtn">Jellyfish</button>
     </div>
@@ -19,30 +19,39 @@
         <div id="changingText">初めまして、私は Jellyfish です</div>
         <div class="separator">♡ ••┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈•• ♡</div>
 
-        <!-- 📅 日期倒數 -->
+        <!-- 倒數日 -->
         <div class="box">
-            <h3>📅 重要日子倒數</h3>
-            <p id="countdownText">設定日期倒數...</p>
-            <button class="editBtn" onclick="editCountdown()">修改</button>
+            <h3>📅 倒數日</h3>
+            <p id="countdown">計算中...</p>
         </div>
 
-        <!-- 📆 月曆 -->
+        <!-- 便利貼 -->
         <div class="box">
-            <h3>📆 月曆</h3>
-            <iframe src="https://calendar.google.com/calendar/embed?src=your-calendar-id" style="border: 0" width="300" height="250"></iframe>
+            <h3>📌 便利貼</h3>
+            <button onclick="openNotePopup()">新增留言</button>
+            <div id="notes"></div>
         </div>
 
-        <!-- 📝 便利貼（彈窗） -->
-        <button id="openStickyBtn">📌 開啟便利貼</button>
-        <div id="stickyPopup" class="popup">
-            <div class="popup-content">
-                <span class="close" onclick="closeSticky()">&times;</span>
-                <h3>📝 便利貼</h3>
-                <textarea id="stickyNote"></textarea>
-                <button onclick="saveSticky()">保存</button>
-            </div>
+        <!-- 代辦事項 -->
+        <div class="box">
+            <h3>✅ 代辦事項</h3>
+            <input type="text" id="todoInput" placeholder="輸入代辦事項...">
+            <button onclick="addTodo()">新增</button>
+            <ul id="todoList"></ul>
         </div>
 
+        <!-- Instagram 連結 -->
+        <div class="box">
+            <h3>📎 連結</h3>
+            <a href="https://instagram.com/你的帳號" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <!-- 便利貼彈窗 -->
+    <div id="notePopup" class="popup">
+        <textarea id="noteText" placeholder="輸入留言..."></textarea>
+        <button onclick="saveNote()">儲存</button>
+        <button onclick="closeNotePopup()">取消</button>
     </div>
 
     <script src="script.js"></script>
